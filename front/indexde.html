@@ -37,6 +37,21 @@
         </div>
       </div>
     </nav>
+    <!-- Menu burger -->
+    <div id="iconeburger">
+      <img src="assets/images/burger.png" alt="icône menu burger">
+    </div>
+    <div id="menuburger" class="visible">
+      <a href="#qsn">Wer wir sind</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontakt</a>
+      <div class="menu-item" id="langues">Sprachen</div>
+      <div id="submenu">
+        <div class="submenu-item"><a href="indexfr.html">Français</a></div>
+        <div class="submenu-item"><a href="indexen.html">English</a></div>
+        <div class="submenu-item"><a href="indexde.html">Deutsch</a></div>
+      </div>
+    </div>
     <!-- Slogan -->
       <div class="slogan">
         <div>
@@ -167,14 +182,14 @@
                   <input type="text" id="name" placeholder="Name">
                 </div>
                 <div class="champs">
-                  <input type="email" id="email" placeholder="Email"><br>
+                  <input type="email" id="email" oninvalid="setCustomValidity('Geben Sie eine gültige E-Mail-Adresse ein.')" placeholder="Email"><br>
                 </div>
               </div>
               <input type="text" id="subject" placeholder="Objekt"><br>
               <textarea id="message" placeholder="Nachricht" cols="30" rows="10"></textarea><br>
               <label class="data_consent">
               <input type="checkbox" id="consent" required> 
-              I consent to the processing of personal data.
+              Ich bin mit der Verarbeitung personenbezogener Daten einverstanden.
               </label><br>
               <input type="submit" class="submit" value="Senden Sie">
           </form>
@@ -194,7 +209,7 @@
     </div>
     <!-- Mentions légales et Copyright -->
     <div class="legal">
-      <a href="">Gesetzliche Hinweise</a>
+      <a href="mentionfr.html">Gesetzliche Hinweise</a>
       <p>Copyright</p>
     </div>
     <!-- Flèche pour remonter en haut de la page -->

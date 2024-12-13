@@ -4,9 +4,11 @@ let name = document.getElementById("name");
 let email = document.getElementById("email");
 let subject = document.getElementById("subject");
 let message = document.getElementById("message");
-const burgerIcon = document.querySelector('.burger-icon');
-const burgerMenu = document.querySelector('.burger-menu');
-const mobileMenu = document.querySelector('.mobile_menu');
+document.addEventListener('DOMContentLoaded', function() {
+let iconeburger = document.getElementById('iconeburger');
+let menuburger = document.getElementById('menuburger');
+let langues = document.getElementById('langues');
+let submenu = document.getElementById('submenu');
 
 /* FAQ accordion */
 function toggleAccordion() {
@@ -22,12 +24,6 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
-
-/* Burger menu opening */
-burgerMenu.addEventListener('click', () => {
-  burgerMenu.classList.toggle('show');
-  mobileMenu.classList.toggle('show');
-});
 
 /* Contact form submission */ 
 contactForm.addEventListener("submit", (e) => {
@@ -59,4 +55,25 @@ contactForm.addEventListener("submit", (e) => {
     }
   }
   xhr.send(JSON.stringify(formData));
+});
+
+/* Toggle pour le menu burger */
+iconeburger.addEventListener("click", function() {
+  if (menuburger.style.display === "none" || menuburger.style.display === "") {
+    menuburger.style.display = "block";
+    iconeburger.innerHTML = '<img src="assets/images/croix.png" alt="icône croix"/>';
+  } else {
+    menuburger.style.display = "none";
+    iconeburger.innerHTML = '<img src="assets/images/burger.png" alt="icône menu burger">';
+  }
+});
+
+/* Toggle du submenu */
+langues.addEventListener("click", function() {
+  if (submenu.style.display === "none" || submenu.style.display === "") {
+    submenu.style.display = "block";
+    } else {
+      submenu.style.display = "none";
+    }
+  });
 });

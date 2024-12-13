@@ -29,28 +29,35 @@
 .dropdown {
   position: absolute;
   top: 20px;
-  right: 10px;
+  right: 20px;
   z-index: 1000;
 }
+/*
+.btn_container {
+  border: solid black 3px;
+  background-color: red;
+} */
 
 .dropbtn {
   background-color: var(--vertclair);
   color: var(--blancgris);
-  padding: 16px;
+  padding: 10px;
   font-size: 16px;
+  font-family: var(--Poppins);
+  font-weight: 500;
   border: none;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #efefef;
+  min-width: 80px;
+  box-shadow: 0px 5px 10px #67644acc;
   z-index: 1;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -58,14 +65,67 @@
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: var(--noirvert);
+  padding-left: 5px;
   text-decoration: none;
   display: block;
 }
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
+/* Stylisation du menu burger */
+#menuburger {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #ebf0eb;;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+}
+
+#submenu {
+  display: none;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+}
+
+.menu-item {
+  cursor: pointer;
+  margin: 5px 0;
+  color: var(--vertfonce);
+  margin-left: 10px;
+}
+
+#submenu {
+  color: var(--vertfonce);
+}
+.submenu-item {
+  margin: 3px 0;
+  cursor: pointer;
+}
+
+ #iconeburger {
+  height: 30px;
+  width: 30px; 
+  position: absolute;
+  display: none;
+}
+
+#iconeburger img{
+  width: 100%;
+}
+
+#menuburger a {
+font-family: var(--Poppins);
+text-decoration: none;
+color: var(--vertfonce);
+padding: 10px;
+display: flex;
+}
+
 
 /* Importation de la police Castle Begale */
 
@@ -140,7 +200,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  flex-wrap: wrap;
 }
 
 .txtslogan {
@@ -181,24 +240,26 @@ h2 {
 /* Espace blocs présentation */
 
 .presentation {
-  position: relative;
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
-  align-items: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .rubrique {
   background-color: var(--vertclair);
   color: var(--blancgris);
-  width: 310px;
   padding: 20px;
+  justify-content: space-between;
   border-radius: 20px;
   text-align: justify;
+  width: 32%;
 }
 
 .titre_rubrique {
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--blancgris);
   font-weight: 600;
   line-height: 45px;
@@ -208,7 +269,7 @@ h2 {
 /* Espace Comment fonctionne l'app */
 
 .how {
-  text-align: center;
+  text-align: justify;
   margin-top: 100px;
 }
 
@@ -216,6 +277,7 @@ h2 {
   color: var(--vertfonce);
   font-weight: 400;
   margin: 30px 0;
+  text-align: center;
 }
 
 /* Blocs */
@@ -554,6 +616,11 @@ input:-webkit-autofill:active {
     display: none;
   }
 
+  .how p {
+    margin-bottom: 8rem;
+    text-align: justify;
+  }
+
   .conteneur_app.left {
     flex-direction: column-reverse;
     flex-wrap: wrap;
@@ -594,6 +661,42 @@ input:-webkit-autofill:active {
 
   .fleche-haut {
     display:none;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  #iconeburger {
+    display: block;
+    right: 0;
+  }
+
+  #menuburger {
+    top: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .slogan {
+    flex-direction: column;
+  }
+  .slogan img {
+    width: 100%;  
+  }
+
+  .presentation {
+    flex-direction: column;
+  }
+
+  .conteneur_app {
+    flex-direction: column;
+  }
+
+  .imgLogoTexte {
+    height: 80px;
   }
 }
 
@@ -639,33 +742,127 @@ input:-webkit-autofill:active {
   .presentation {
     align-items: center;
   }
+
+  .submit {
+    font-size: 1em;
+  }
+
+  .contact_form .submit {
+    width: 40%;
+  }
+
+  .playlists {
+    margin: 100px 0 0 0;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  #iconeburger {
+    display: block;
+    right: 5px;
+    top: 5px;
+  }
+
+  #menuburger {
+    top: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .slogan {
+    flex-direction: column;
+  }
+  .slogan img {
+    width: 100%;  
+  }
+
+  .presentation {
+    flex-direction: column;
+  }
+
+  .conteneur_app {
+    flex-direction: column;
+  }
+
+  .imgLogoTexte {
+    height: 80px;
+  }
+
 }
-  @media (max-width: 480px) {
-    .slogan {
-      flex-direction: column;
-      text-align: center;
-    }
+@media (max-width: 480px) {
+  .slogan {
+    flex-direction: column;
+    text-align: center;
+  }
   
-    h1 {
-      font-size: 2.5em;
-    }
+  h1 {
+    font-size: 2.5em;
+  }
 
-    .mockup {
-        width: 80%;
-        margin: 30px;
-    } 
-    
-    .bientot {
-      font-size: 1em;
-      padding: 10px 30px;
-    }
-  
-    .container {
-      width: 90%;
-    }
-
-    .mockup {
+  .mockup {
       width: 80%;
       margin: 30px;
-    }
+    } 
+    
+  .bientot {
+    font-size: 1em;
+    padding: 10px 30px;
   }
+  
+  .container {
+    width: 90%;
+  }
+
+  .mockup {
+    width: 80%;
+    margin: 30px;
+  }
+
+  .submit {
+    font-size: 1em;
+  }
+
+  .playlists {
+    margin: 100px 0 0 0;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  #iconeburger {
+    display: block;
+    right: 0;
+  }
+
+  #menuburger {
+    top: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .slogan {
+    flex-direction: column;
+  }
+  .slogan img {
+    width: 100%;  
+  }
+
+  .presentation {
+    flex-direction: column;
+  }
+
+  .conteneur_app {
+    flex-direction: column;
+  }
+
+  .imgLogoTexte {
+    height: 80px;
+  }
+}

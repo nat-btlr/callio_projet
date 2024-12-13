@@ -14,12 +14,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
 </head>
 <body>
-  <div class="dropdown">
-    <button class="dropbtn">Langue</button>
-    <div class="dropdown-content">
-      <a href="indexfr.html">Français</a>
-      <a href="indexen.html">English</a>
-      <a href="indexde.html">Deutsch</a>
+  <div class="btn_container">
+    <div class="dropdown">
+      <button class="dropbtn">Langue</button>
+      <div class="dropdown-content">
+        <a href="indexfr.html">Français</a>
+        <a href="indexen.html">English</a>
+        <a href="indexde.html">Deutsch</a>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -37,15 +39,21 @@
         </div>
       </div>
     </nav>
-    <!-- Menu burger -->
-    <div class="burger_menu">
-      <button class="burger_icon">☰</button>
-      <div class="mobile_menu">
-          <a href="#qsn">Qui sommes-nous</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-      </div>
+<!-- Menu burger -->
+  <div id="iconeburger">
+    <img src="assets/images/burger.png" alt="icône menu burger">
+  </div>
+  <div id="menuburger" class="visible">
+    <a href="#qsn">Qui sommes-nous</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <div class="menu-item" id="langues">Langues</div>
+      <div id="submenu">
+        <div class="submenu-item"><a href="indexfr.html">Français</a></div>
+        <div class="submenu-item"><a href="indexen.html">English</a></div>
+        <div class="submenu-item"><a href="indexde.html">Deutsch</a></div>
     </div>
+  </div>
     <!-- Slogan -->
       <div class="slogan">
         <div>
@@ -176,16 +184,16 @@
               <h2 class="h2_contact" id="contact" data-i18n="title_contact">Contactez nous</h2>
               <div class="row_contact">
                 <div class="champs">
-                  <input type="text" id="name" placeholder="Nom" data-i18n="contact_name">
+                  <input type="text" id="name" placeholder="Nom">
                 </div>
                 <div class="champs">
-                  <input type="email" id="email" placeholder="Email" data-i18n="contact_email"><br>
+                  <input type="email" id="email" oninvalid="setCustomValidity('Entrez une adresse email valide.')" placeholder="Email" required><br>
                 </div>
               </div>
               <input type="text" id="subject" data-i18n="contact_subject" placeholder="Votre sujet"><br>
-              <textarea id="message" data-i18n="contact_message" placeholder="Message" cols="30" rows="10"></textarea><br>
+              <textarea id="message" placeholder="Message" cols="30" rows="10"></textarea><br>
               <label class="data_consent">
-              <input type="checkbox" id="consent" required data-i18n="agreement_privacy"> 
+              <input type="checkbox" id="consent"> 
               Je consens au traitement de mes données personnelles.
               </label><br>
               <input type="submit" class="submit" value="Envoyer" data-i18n="contact_button">
@@ -206,7 +214,7 @@
     </div>
     <!-- Mentions légales et Copyright -->
     <div class="legal">
-      <a href="">Mentions légales</a>
+      <a href="mentionfr.html">Mentions légales</a>
       <p>Copyright</p>
     </div>
     <!-- Flèche pour remonter en haut de la page -->
