@@ -1,0 +1,671 @@
+/* Définition de la charte graphique */
+
+:root {
+
+  --blancgris: #ebf0eb;
+  --beige: #e7dbc1;
+  --marron: #67644a;
+  --bleugris: #a4bdaa;
+  --vertfonce: #4c6b55;
+  --vert: #3f7652;
+  --vertclair: #739c7c;
+  --noirvert: #263429;
+
+  --Poppins: 'Poppins';
+
+}
+
+/* Le * englobe tout */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Dropdown avec des langues */
+
+.dropdown {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.dropbtn {
+  background-color: var(--vertclair);
+  color: var(--blancgris);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Importation de la police Castle Begale */
+
+@font-face {
+  font-family: 'Callio'; /* Nom que tu donnes à la police */
+  src: url('./assets/fonts/Castle\ Begale.otf') format('truetype'); /* Chemin vers le fichier */
+}
+
+/* Styliation du corps principal de la page */
+
+body {
+  background: linear-gradient(180deg, #ebf0eb 70%, #4c6b55CC 100%);
+  font-family: var(--Poppins);
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+/* Barre de navigation */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger_menu {
+  display: none;
+}
+
+.menu_nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.lien1 {
+  width: 260px;
+  text-align: center;
+}
+
+.lien2 {
+  width: 60px;
+  text-align: center;
+}
+
+.lien3 {
+  width: 110px;
+  text-align: center;
+}
+
+.lienNav a {
+  font-family: var(--Poppins);
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--vertfonce);
+  font-size: 1.5em;
+  transition: 0.5s ease-in-out;
+}
+
+.lienNav a:hover {
+  letter-spacing: 2px;
+  transition: letter-spacing 0.5s ease-in-out;
+}
+
+/* Espace slogan avec mockup tablette */
+
+.slogan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.txtslogan {
+  text-align: center;
+}
+
+
+h1 {
+  font-family: 'Callio';
+  color: var(--vertfonce);
+  font-size: 5em;
+}
+
+h2 {
+  color: var(--noirvert);
+  font-weight: 500;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.bientot {
+  font-weight: 900;
+  font-family: var(--Poppins);
+  color: var(--blancgris);
+  letter-spacing: 5px;
+  background-color: var(--vertclair);
+  border-radius: 100px;
+  font-size: 1.5em;
+  border: none;
+  padding: 10px 70px;
+  margin-top: 50px;
+}
+
+.bientot:hover {
+  color: white;
+}
+
+/* Espace blocs présentation */
+
+.presentation {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  align-items: flex-start;
+}
+
+.rubrique {
+  background-color: var(--vertclair);
+  color: var(--blancgris);
+  width: 310px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: justify;
+}
+
+.titre_rubrique {
+  font-size: 3em;
+  color: var(--blancgris);
+  font-weight: 600;
+  line-height: 45px;
+  margin-bottom: 15px;
+}
+
+/* Espace Comment fonctionne l'app */
+
+.how {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.h2how {
+  color: var(--vertfonce);
+  font-weight: 400;
+  margin: 30px 0;
+}
+
+/* Blocs */
+
+.conteneur_app {
+  display: flex;
+  align-items: center;
+}
+
+.image_app {
+  width: 50%;
+  height: 50%;
+}
+
+.titresBlocs {
+  font-weight: 400;
+}
+
+.texte {
+  text-align: justify;
+}
+
+.playlists {
+  margin: 100px 100px -50px 0;
+}
+
+.gifski {
+  border-radius: 10px;
+}
+
+.gifmouton {
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+  left: 35px;
+  bottom: 135px;
+}
+
+/* Espace Qui sommes nous */
+
+.qsn p {
+  text-align: justify;
+}
+
+.h2qsn {
+  color: var(--vertfonce);
+  font-weight: 400;
+  margin: 100px 0 50px 0;
+  text-align: center;
+}
+
+/* Bannière logo texte en image de fond d'une div */
+
+.imgLogoTexte {
+  width: 100%;
+  height: 385px;
+  background-image: url('./assets/images/3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 100px 0;
+}
+
+/* FAQ section */
+
+.faq_section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.h2_faq {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--noirvert);
+  font-weight: 400;
+}
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid var(--noirvert);
+    button[aria-expanded="true"] {
+      border-bottom: none;
+    }
+  }
+
+  button {
+    position: relative;
+    display: block;
+    color: #314035;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 5px;
+      width: 7px;
+      height: 7px;
+      border-left: 2px solid currentColor;
+      padding-right: 2px;
+      border-top: 2px solid currentColor;
+      transform: rotate(220deg);
+      transition: transform 200ms ease;
+
+      &::before {
+        content: "";
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+  button[aria-expanded="true"] {
+    .icon {
+      transform: rotate(45deg);
+    }
+
+    + .accordion-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+
+  .accordion-content {
+    font-family: "Poppins", sans-serif;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 1em 0;
+    }
+  }
+}
+
+
+/* Contact form */
+.h2_contact {
+  color: var(--noirvert);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 100px 0;
+}
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.contact_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  padding: 10px;
+  background-color: #26342900;
+  border: none;
+  border-bottom: 1px solid #3140355f;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact_form input::placeholder, 
+.contact_form textarea::placeholder {
+  font-weight: bold; /* Ajuste l'épaisseur, ex: normal, bold, 100, 200, etc. */
+}
+
+.row_contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.champs {
+  width: 100%;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: var(--vertclair);
+  outline: none;
+}
+
+.contact_form .submit {
+  background-color: var(--vertfonce);
+  color: var(--blancgris);
+  width: 30%;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+textarea {
+  resize: none;
+}
+/* Redefining the styles for autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Data consent checkbox */
+.data_consent {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: var(--vertfonce);
+  margin-top: 10px;
+}
+
+.data-consent input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#consent {
+  width: auto;
+}
+
+.data-consent input {
+  cursor: pointer;
+}
+
+/* Espace réseaux sociaux */
+
+.rs {
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.svgrs {
+  fill: var(--marron);
+  width: 50px;
+}
+
+/* Espace mentions légales */
+
+.legal {
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+  color: var(--noirvert);
+  line-height: 50px;
+}
+
+.legal a {
+  color: var(--noirvert);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.fleche-haut {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  fill: var(--vertfonce);
+}
+
+/* Responsivité */
+
+@media (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rubrique {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu_nav {
+    display: none;
+  }
+
+  .conteneur_app.left {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .conteneur_app.right {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .burger_menu {
+    display: block;
+  }
+
+  .slogan {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txtslogan {
+    width: 90%;
+  }
+
+  .bientot {
+    font-size: 1.2em;
+    padding: 10px 50px;
+  }
+
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rubrique {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .fleche-haut {
+    display:none;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .how p {
+    margin-bottom: 8rem;
+  }
+
+  .imgLogoTexte {
+    width: 100%;
+  }
+
+  .menu_nav {
+    display: none;
+  }
+
+  .burger_menu {
+    display: block;
+  }
+
+  .slogan {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image_app {
+    width: 100%;
+  }
+
+  .h2how,
+  .h2qsn {
+    font-size: 1.5em;
+  }
+
+  .fleche-haut {
+    display: none;
+  }
+
+  .presentation {
+    align-items: center;
+  }
+}
+  @media (max-width: 480px) {
+    .slogan {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .mockup {
+        width: 80%;
+        margin: 30px;
+    } 
+    
+    .bientot {
+      font-size: 1em;
+      padding: 10px 30px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+
+    .mockup {
+      width: 80%;
+      margin: 30px;
+    }
+  }
