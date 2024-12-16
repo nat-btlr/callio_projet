@@ -609,6 +609,10 @@ input:-webkit-autofill:active {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  #menuburger {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -696,7 +700,7 @@ input:-webkit-autofill:active {
   }
 
   .imgLogoTexte {
-    height: 80px;
+    height: 200px;
   }
 }
 
@@ -748,7 +752,7 @@ input:-webkit-autofill:active {
   }
 
   .contact_form .submit {
-    width: 40%;
+    width: 45%;
   }
 
   .playlists {
@@ -789,7 +793,7 @@ input:-webkit-autofill:active {
   }
 
   .imgLogoTexte {
-    height: 80px;
+    height: 150px;
   }
 
 }
@@ -824,6 +828,10 @@ input:-webkit-autofill:active {
 
   .submit {
     font-size: 1em;
+  }
+
+  .contact_form .submit {
+    width: 50%;
   }
 
   .playlists {
@@ -863,6 +871,6 @@ input:-webkit-autofill:active {
   }
 
   .imgLogoTexte {
-    height: 80px;
+    height: 150px;
   }
 }
